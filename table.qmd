@@ -15,6 +15,24 @@ editor: visual
   align-items: center;
   height: 100vh;
 }
+
+.contributor {
+  margin: 0px 2px;
+  transition: all 0.2s ease-in-out;
+}
+
+.contributor:hover {
+  transform: translateY(-6px);
+  transition: all 0.2s ease-in-out;
+}
+
+.package_repo_url {
+  text-decoration: none;
+}
+
+.package_repo_url:hover {
+  text-decoration: underline;
+}
 ```
 
 ```{r warning=FALSE}

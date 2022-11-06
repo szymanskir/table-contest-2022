@@ -1,0 +1,4 @@
+- source: table.qmd
+  quarto-pub:
+    - id: d5894afb-22a4-444e-890d-1733bc5b181d
+      url: 'https://quartopub.com/sites/szymanskir/tidyverse_in_numbers'

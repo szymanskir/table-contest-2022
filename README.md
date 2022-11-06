@@ -1,5 +1,7 @@
 # Table Contests 2022 Submission - Tidyverse in Numbers
 
+The rendered table is available on QuartoPub: https://szymanskir.quarto.pub/tidyverse_in_numbers/
+
 ## Development Instructions
 
 The project uses `renv` for managing dependencies. To install all required packages run:

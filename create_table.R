@@ -34,10 +34,12 @@ create_history_download_chart <- function(downloads_data) {
 }
 
 number_value_icon_cell <- function(value, icon) {
-  htmltools::span(
-    htmltools::span(
-      value
-    ),
+  htmltools::div(
+    style = "
+      display: flex;
+      justify-content: flex-end
+    ",
+    value,
     htmltools::img(
       src = knitr::image_uri(icon),
       height = "24px",
@@ -93,7 +95,6 @@ create_table <- function(all_data) {
               htmltools::div(
                 style = "
                   font-size: 14px;
-                  margin-top: 6px;
                   font-style: italic;
                   color: hsl(201, 23%, 34%);
                   line-height: 20px
