@@ -1,0 +1,6 @@
+*.RDS
+.Renviron
+.Rhistory
+.Rproj.user
+*.html
+table_files/

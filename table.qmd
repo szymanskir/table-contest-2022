@@ -1,0 +1,24 @@
+---
+execute:
+  echo: false
+format: 
+  html:
+    page-layout: custom
+editor: visual
+---
+
+```{css}
+.page-layout-custom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+```
+
+```{r warning=FALSE}
+source("create_table.R")
+all_data <- readRDS("all_data.RDS")
+create_table(all_data)
+```
