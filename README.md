@@ -1,5 +1,7 @@
 # Table Contest 2022 Submission - Tidyverse in Numbers
 
+![](./gifs/table_contest_2022.gif)
+
 The rendered table is available on QuartoPub: https://szymanskir.quarto.pub/tidyverse_in_numbers/
 
 ## Development Instructions
