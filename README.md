@@ -1,4 +1,4 @@
-# Table Contests 2022 Submission - Tidyverse in Numbers
+# Table Contest 2022 Submission - Tidyverse in Numbers
 
 The rendered table is available on QuartoPub: https://szymanskir.quarto.pub/tidyverse_in_numbers/
 
@@ -23,7 +23,7 @@ Next, to prepare the data for the table run the `data_ingestion.R` script:
 source("data_ingestion.R")
 ```
 
-This will create an `all_data.RDS` repository. Now to generate the report with the table run:
+This will create an `all_data.RDS` file in the repository. Now to generate the report with the table run:
 
 ```r
 quarto::quarto_render(input = "table.qmd")
