@@ -39,16 +39,16 @@ number_value_icon_cell <- function(value, icon) {
       display: flex;
       justify-content: flex-end
     ",
-    value,
     htmltools::img(
       src = knitr::image_uri(icon),
       height = "24px",
       width = "24px",
       style = "
         vertical-align: bottom;
-        margin-left: 6px;
+        margin-right: 4px;
       "
-    )
+    ),
+    value
   )
 }
 
