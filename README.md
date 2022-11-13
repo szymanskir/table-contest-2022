@@ -6,6 +6,10 @@
 
 Explore different GitHub stats related to the core Tidyverse packages. See how their download numbers were changing over time, and see who are the top 5 contributors of your favorite package.
 
+The table was created using [reactable](https://github.com/glin/reactable/) and the plots within it are created using [echarts4r](https://echarts4r.john-coene.com/). The icons used in the submission come from [heroicons](https://heroicons.com/).
+
+There were two data sources: GitHub statistics fetched using [gh](https://github.com/r-lib/gh) and monthly download stats gathered using [dlstats](https://github.com/GuangchuangYu/dlstats).
+
 ## Development Instructions
 
 The project uses `renv` for managing dependencies. To install all required packages run:
