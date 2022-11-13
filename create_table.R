@@ -153,7 +153,8 @@ create_table <- function(all_data) {
                     border-radius: 100%;
                     box-shadow: rgba(27, 31, 36, 0.15) 0px 0px 0px 1px
                   "
-                ) %>% htmltools::a(href = .x$html_url, target="_blank")
+                ) %>% htmltools::a(href = .x$html_url, target="_blank") %>% 
+                  htmltools::tags$abbr(title = .x$login)
               )
             )
           )
