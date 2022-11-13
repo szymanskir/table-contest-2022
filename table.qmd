@@ -13,7 +13,9 @@ editor: visual
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  overflow: scroll;
+  min-width: 1200px;
 }
 
 .contributor {
