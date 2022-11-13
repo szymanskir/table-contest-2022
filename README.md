@@ -2,7 +2,9 @@
 
 ![](./gifs/table_contest_2022.gif)
 
-The rendered table is available on QuartoPub: https://szymanskir.quarto.pub/tidyverse_in_numbers/
+> The rendered table is available on QuartoPub: https://szymanskir.quarto.pub/tidyverse_in_numbers/
+
+Explore different GitHub stats related to the core Tidyverse packages. See how their download numbers were changing over time, and see who are the top 5 contributors of your favorite package.
 
 ## Development Instructions
 
