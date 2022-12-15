@@ -71,6 +71,7 @@ create_table <- function(all_data) {
             htmltools::div(
               htmltools::img(
                 src = value,
+                alt = glue::glue("Hex sticker of {row_data$package_name}"),
                 height = "80px"
               )
             ),
@@ -147,6 +148,7 @@ create_table <- function(all_data) {
               ~htmltools::span(
                 htmltools::img(
                   src = .x$avatar_url,
+                  alt = glue::glue("GitHub avatar of {.x$login}"),
                   class = "contributor",
                   height = "44px", 
                   style = "
