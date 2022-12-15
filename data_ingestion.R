@@ -16,7 +16,8 @@ tidyverse_repositories <- paste0(
 )
 
 get_hex_sticker <- function(package) {
-  glue::glue("https://raw.githubusercontent.com/rstudio/hex-stickers/master/SVG/{package}.svg")
+  commit_hash <- "a9d38e4f81fa8ed5defd190a77c469fdbd63b1da"
+  glue::glue("https://raw.githubusercontent.com/rstudio/hex-stickers/{commit_hash}/SVG/{package}.svg")
 }
 
 get_repository_data <- function(repository) {
