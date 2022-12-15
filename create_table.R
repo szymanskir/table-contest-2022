@@ -8,6 +8,8 @@ create_history_download_chart <- function(downloads_data) {
     echarts4r::e_axis(axis = "y", show = FALSE) %>% 
     echarts4r::e_tooltip(
       trigger = "axis",
+      
+      # Creates custom tooltip content
       formatter = htmlwidgets::JS("
         function(params) {
           const downloadsDate = params[0].value[0];
@@ -24,6 +26,8 @@ create_history_download_chart <- function(downloads_data) {
         }
       ")
     ) %>% 
+    # Prevents the plot toolitp from being hidden in case
+    # it goes over the table boundaries
     htmlwidgets::onRender(
       htmlwidgets::JS("
         function(el, x) {
@@ -63,6 +67,9 @@ create_table <- function(all_data) {
         name = "",
         cell = function(value, row_index) {
           row_data <- all_data[row_index, ]
+          
+          # Display Hex along with title and
+          # repository description
           htmltools::div(
             style = "
               display: flex; 
@@ -107,9 +114,13 @@ create_table <- function(all_data) {
         },
         width = 384
       ),
+      
+      # Hide unused columns
       repo_url = reactable::colDef(show = FALSE),
       package_name = reactable::colDef(show = FALSE),
       description = reactable::colDef(show = FALSE),
+      
+      # Render repo stats in form of <ICON> <NUMBER>
       stargazers = reactable::colDef(
         name = "Stargazers",
         cell = function(value) {
@@ -139,6 +150,8 @@ create_table <- function(all_data) {
         width = 256,
         style = "overflow: visible;"
       ),
+      
+      # Display contributor avatars as image bubbles
       top_5_contributors = reactable::colDef(
         name = "Top Five Contributors",
         cell = function(value) {
@@ -164,6 +177,9 @@ create_table <- function(all_data) {
         width = 256
       )
     ),
+    
+    # Center Vertically the content of each column
+    # and use custom font
     theme = reactable::reactableTheme(
       cellStyle = list(
         display = "flex",
@@ -177,6 +193,7 @@ create_table <- function(all_data) {
     fullWidth = FALSE,
     sortable = FALSE
   ) %>% 
+    # Add titleto the table
     htmlwidgets::prependContent(
       htmltools::div(
         style = "
@@ -187,6 +204,8 @@ create_table <- function(all_data) {
     )
   
   
+  # Include custom styling as it's impossible to
+  # use the :hover in inline CSS
   htmltools::browsable(htmltools::tagList(
     htmltools::tags$head(
       htmltools::tags$style("
